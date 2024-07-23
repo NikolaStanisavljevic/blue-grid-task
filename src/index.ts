@@ -3,9 +3,10 @@ import dotenv from "dotenv";
 import { rootRouter } from "./routes";
 
 dotenv.config();
+const port = process.env.PORT;
 
 const app = express();
 
 app.use("/api", rootRouter);
 
-app.listen(4500, () => console.log("Listening on port 4500..."));
+app.listen(port, () => console.log(`Listening on port ${port}...`));
