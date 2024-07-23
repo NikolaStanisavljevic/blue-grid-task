@@ -1,0 +1,33 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:node/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "rules": {
+    "node/no-missing-import": [
+      "error",
+      {
+        "tryExtensions": [".js", ".json", ".ts"]
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "rules": {
+        "node/no-unsupported-features/es-syntax": "off"
+      }
+    }
+  ],
+  "env": {
+    "node": true,
+    "es2021": true
+  }
+}
