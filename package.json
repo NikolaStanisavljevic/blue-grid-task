@@ -5,6 +5,8 @@
   "scripts": {
     "start": "npm run build && node dist/index.js",
     "dev": "ts-node-dev src/index.ts",
+    "build": "tsc",
+    "docker:dev": "docker-compose up --build",
     "lint": "eslint . --ext .ts",
     "format": "prettier --write .",
     "test": "jest"
