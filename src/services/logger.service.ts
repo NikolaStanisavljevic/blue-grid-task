@@ -1,4 +1,14 @@
 export class LoggerService {
+  private static instance: LoggerService;
+
+  public static getInstance(): LoggerService {
+    if (!LoggerService.instance) {
+      LoggerService.instance = new LoggerService();
+    }
+
+    return LoggerService.instance;
+  }
+
   log(message: string, caller: string) {
     console.log(`[${caller}] ${message}`);
   }
@@ -7,3 +17,5 @@ export class LoggerService {
     console.error(`[${caller}] ${message}`, error);
   }
 }
+
+export const logger = LoggerService.getInstance();
