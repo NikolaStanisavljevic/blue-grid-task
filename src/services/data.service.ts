@@ -1,5 +1,5 @@
 import { URL } from "url";
-import { DataResponse, OutputJson } from "../types/response";
+import { DataResponse, OutputJson } from "../types/response.type";
 import { logger } from "../services/logger.service";
 
 export class DataService {

@@ -1,5 +1,5 @@
 import { CacheKeys } from "../constants/cache-keys";
-import { OutputJson } from "../types/response";
+import { OutputJson } from "../types/response.type";
 import { APIService } from "./api.service";
 import { cacheService } from "./cache.service";
 import { DataService } from "./data.service";

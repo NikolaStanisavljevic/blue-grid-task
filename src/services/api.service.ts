@@ -1,6 +1,6 @@
 import axios from "axios";
 import { logger } from "./logger.service";
-import { DataResponse } from "../types/response";
+import { DataResponse } from "../types/response.type";
 
 export class APIService {
   async fetchData(): Promise<DataResponse | null> {
